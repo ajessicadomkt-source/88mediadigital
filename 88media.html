@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="88 Media Digital — agência de tráfego pago e estratégia de funil para infoprodutores que já vendem e querem escalar com previsibilidade.">
+  <meta name="theme-color" content="#0a0c0c">
+  <meta name="author" content="88 Media Digital">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>88 Media Digital — Tráfego pago para infoprodutores</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="88 Media Digital — Tráfego pago para infoprodutores">
+  <meta property="og:description" content="Tráfego pago e estratégia de funil para infoprodutores que já vendem e querem escalar com previsibilidade.">
+  <meta property="og:site_name" content="88 Media Digital">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://home-institucional.vercel.app/assets/css/style.css?v=6">
+
+  <style>
+    /* ── TOKENS 88 MEDIA DIGITAL ── */
+    :root {
+      --teal:        #1BBCBF;
+      --teal-deep:   #0E9497;
+      --teal-dim:    rgba(27, 188, 191, 0.12);
+      --teal-border: rgba(27, 188, 191, 0.22);
+      --teal-glow:   rgba(27, 188, 191, 0.06);
+      --dark:        #0a0c0c;
+      --dark-2:      #0e1516;
+      --dark-3:      #131d1e;
+      --text-muted:  rgba(255,255,255,0.55);
+      --radius-card: 16px;
+    }
+
+    /* ── OVERRIDES: Outsider School external CSS → teal ── */
+    body { background: var(--dark); }
+    .kicker { color: var(--teal) !important; }
+    .kicker--light { color: var(--teal) !important; opacity: 0.85; }
+    .section-title em,
+    .hero__title em,
+    .program__title em { color: var(--teal) !important; font-style: italic; }
+    .eyebrow { color: var(--teal) !important; }
+    .hero__bullets li svg { stroke: var(--teal); }
+    .badge-mode { border-color: var(--teal-border) !important; color: var(--teal) !important; }
+    .badge-mode__dot { background: var(--teal) !important; }
+    .pilar-card { border-color: var(--teal-border) !important; background: var(--dark-2) !important; }
+    .pilar-card:hover { background: var(--dark-3) !important; border-color: var(--teal) !important; }
+    .pilar-card__icon { color: var(--teal) !important; border-color: var(--teal-border) !important; background: var(--teal-dim) !important; }
+    .pilar-card h3 { color: #fff !important; }
+    .pilar-card p { color: var(--text-muted) !important; }
+    .pilares { background: var(--dark-2) !important; }
+    .navbar { background: var(--dark) !important; border-bottom-color: var(--teal-border) !important; }
+    .navbar__tagline { color: var(--text-muted) !important; }
+    .navbar__brand-text { color: #fff !important; }
+    .btn--apply {
+      background: var(--teal) !important;
+      border-color: var(--teal) !important;
+      color: #0a0c0c !important;
+      font-weight: 800 !important;
+    }
+    .btn--apply:hover {
+      background: var(--teal-deep) !important;
+      border-color: var(--teal-deep) !important;
+    }
+    .btn--ghost {
+      border-color: var(--teal-border) !important;
+      color: var(--teal) !important;
+    }
+    .btn--ghost:hover {
+      background: var(--teal-dim) !important;
+      border-color: var(--teal) !important;
+    }
+    .faq__item summary { color: #fff !important; }
+    .faq__item[open] summary { color: var(--teal) !important; }
+    .faq__item { border-color: var(--teal-border) !important; }
+    .faq { background: var(--dark) !important; }
+    .garantia { background: var(--dark-2) !important; }
+    .garantia__copy .eyebrow { color: var(--teal) !important; }
+    .garantia__copy em { color: var(--teal) !important; }
+    .footer--os { background: var(--dark) !important; border-top-color: var(--teal-border) !important; }
+    .footer-contact a { color: var(--teal) !important; }
+    .hero { background: var(--dark) !important; }
+    .hero__copy .kicker { color: var(--teal) !important; }
+
+    /* ── AGENCY TAG ── */
+    .agency-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .agency-tag__dot {
+      width: 6px; height: 6px;
+      background: var(--teal);
+      border-radius: 50%;
+      animation: pulse-teal 2s ease-in-out infinite;
+    }
+    @keyframes pulse-teal {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(1.4); }
+    }
+
+    /* ── NAVBAR LOGO ── */
+    .navbar__logo-img {
+      height: 32px;
+      width: auto;
+      display: block;
+    }
+
+    /* ── HERO: RESPONDI FORM ── */
+    .hero__form-wrap--respondi {
+      background: var(--dark-2);
+      border: 1px solid var(--teal-border);
+      border-radius: var(--radius-card);
+      padding: 36px 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .hero-form__head { margin-bottom: 24px; }
+    .hero-form__badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--teal);
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      border-radius: 100px;
+      padding: 4px 12px;
+      margin-bottom: 12px;
+    }
+    .hero-form__head h2 { font-size: 22px; font-weight: 800; color: #fff; margin: 0 0 6px; line-height: 1.25; }
+    .hero-form__head p  { font-size: 14px; color: var(--text-muted); margin: 0; }
+    .respondi-embed     { width: 100%; min-height: 560px; }
+    @media (max-width: 640px) {
+      .hero__form-wrap--respondi { padding: 24px 20px 20px; }
+    }
+
+    /* ── NÚMEROS ── */
+    .numeros {
+      padding: 72px 0;
+      background: var(--dark-3);
+      border-top: 1px solid var(--teal-border);
+      border-bottom: 1px solid var(--teal-border);
+    }
+    .numeros__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 48px;
+      text-align: center;
+    }
+    .numero__value {
+      font-size: 44px;
+      font-weight: 300;
+      color: var(--teal);
+      letter-spacing: -2px;
+      line-height: 1;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .numero__label { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+    /* ── PARA QUEM É ── */
+    .para-quem { padding: 96px 0; background: var(--dark-2); }
+    .para-quem__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1px;
+      background: var(--teal-border);
+      border: 1px solid var(--teal-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      margin-top: 48px;
+    }
+    .para-quem__item {
+      background: var(--dark-2);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: background 0.2s ease;
+    }
+    .para-quem__item:hover { background: var(--dark-3); }
+    .para-quem__num { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--teal); opacity: 0.7; }
+    .para-quem__item h3 { font-size: 17px; font-weight: 700; color: #fff; line-height: 1.35; margin: 0; }
+    .para-quem__item p  { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+    /* ── NICHOS ── */
+    .nichos { padding: 80px 0; background: var(--dark); }
+    .nichos__chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 40px;
+      justify-content: center;
+    }
+    .nicho-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--dark-2);
+      border: 1px solid var(--teal-border);
+      border-radius: 100px;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+    .nicho-chip:hover { border-color: var(--teal); color: var(--teal); }
+    .nicho-chip svg   { color: var(--teal); }
+    .nichos__players  { margin-top: 56px; text-align: center; }
+    .nichos__players .eyebrow { margin-bottom: 24px; }
+    .players-list { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .player-tag {
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--teal);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── SOBRE A GESTORA ── */
+    .sobre-gestora { padding: 96px 0; background: var(--dark-2); }
+    .gestora__grid {
+      display: grid;
+      grid-template-columns: 400px 1fr;
+      gap: 64px;
+      align-items: center;
+      margin-top: 48px;
+    }
+    @media (max-width: 900px) { .gestora__grid { grid-template-columns: 1fr; gap: 40px; } }
+    .gestora__photo {
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      background: var(--dark-3);
+      border: 1px solid var(--teal-border);
+      aspect-ratio: 4/5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gestora__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gestora__photo-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      color: var(--teal);
+      opacity: 0.4;
+      padding: 40px;
+      text-align: center;
+    }
+    .gestora__photo-placeholder p {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin: 0;
+    }
+    .gestora__bio   { display: flex; flex-direction: column; gap: 24px; }
+    .gestora__bio h3 { font-size: 28px; font-weight: 800; color: #fff; line-height: 1.25; margin: 0; }
+    .gestora__bio p  { font-size: 16px; color: var(--text-muted); line-height: 1.7; margin: 0; }
+    .gestora__stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 8px;
+    }
+    @media (max-width: 480px) { .gestora__stats { grid-template-columns: repeat(2, 1fr); } }
+    .gestora__stat {
+      background: var(--dark);
+      border: 1px solid var(--teal-border);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .gestora__stat strong { display: block; font-size: 22px; font-weight: 300; color: var(--teal); letter-spacing: -1px; margin-bottom: 4px; }
+    .gestora__stat span   { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+
+    /* ── INCLUDES ── */
+    .includes { padding: 96px 0; background: var(--dark); }
+    .includes__list {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--teal-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+    }
+    .includes__row {
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      align-items: center;
+      gap: 24px;
+      padding: 28px 32px;
+      border-bottom: 1px solid var(--teal-border);
+      background: var(--dark-2);
+      transition: background 0.2s ease;
+    }
+    .includes__row:last-child { border-bottom: none; }
+    .includes__row:hover      { background: var(--dark-3); }
+    .includes__icon {
+      width: 48px; height: 48px;
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      color: var(--teal);
+    }
+    .includes__text h4 { font-size: 16px; font-weight: 700; color: #fff; margin: 0 0 4px; }
+    .includes__text p  { font-size: 14px; color: var(--text-muted); margin: 0; line-height: 1.5; }
+    .includes__badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--teal);
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      border-radius: 100px;
+      padding: 4px 12px;
+      white-space: nowrap;
+    }
+    @media (max-width: 640px) {
+      .includes__row { grid-template-columns: 48px 1fr; gap: 16px; padding: 24px 20px; }
+      .includes__badge { display: none; }
+    }
+
+    /* ── DIFERENCIAL ── */
+    .diferencial { padding: 96px 0; background: var(--dark-2); }
+    .diferencial__compare {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 640px) { .diferencial__compare { grid-template-columns: 1fr; } }
+    .compare-col { border-radius: var(--radius-card); padding: 32px; }
+    .compare-col--sem { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
+    .compare-col--com { background: var(--teal-dim); border: 1px solid var(--teal-border); }
+    .compare-col__label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; display: block; }
+    .compare-col--sem .compare-col__label { color: var(--text-muted); }
+    .compare-col--com .compare-col__label { color: var(--teal); }
+    .compare-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .compare-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.5; }
+    .compare-col--sem .compare-list li { color: var(--text-muted); }
+    .compare-col--com .compare-list li { color: rgba(255,255,255,0.9); }
+    .compare-list li svg { flex-shrink: 0; margin-top: 2px; }
+
+    /* ── PROCESSO ── */
+    .processo { padding: 96px 0; background: var(--dark); }
+    .processo__steps {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .step { position: relative; padding: 36px 28px; background: var(--dark-2); border: 1px solid var(--teal-border); border-radius: var(--radius-card); }
+    .step__number { font-size: 48px; font-weight: 300; color: var(--teal); opacity: 0.3; line-height: 1; margin-bottom: 16px; letter-spacing: -2px; }
+    .step h4 { font-size: 16px; font-weight: 700; color: #fff; margin: 0 0 8px; }
+    .step p  { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+    /* ── CTA FINAL ── */
+    .cta-final { padding: 96px 0; background: var(--dark-2); }
+    .cta-final .section-title { max-width: 680px; margin-left: auto; margin-right: auto; text-align: center; }
+    .cta-final .section-head { text-align: center; }
+    .cta-final .section-head__sub { max-width: 480px; margin: 0 auto; }
+    .cta-final-form {
+      max-width: 780px;
+      margin: 48px auto 0;
+      background: var(--dark);
+      border: 1px solid var(--teal-border);
+      border-radius: var(--radius-card);
+      padding: 40px;
+    }
+    @media (max-width: 640px) { .cta-final-form { padding: 24px 20px; } }
+
+    /* ── SERVIÇOS: INTRO 2 CARDS ── */
+    .servicos-intro { padding: 96px 0; background: var(--dark); }
+    .servicos-intro__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 56px;
+    }
+    @media (max-width: 768px) { .servicos-intro__grid { grid-template-columns: 1fr; } }
+    .servico-card {
+      border-radius: var(--radius-card);
+      border: 1px solid var(--teal-border);
+      background: var(--dark-2);
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    .servico-card:hover { border-color: var(--teal); background: var(--dark-3); }
+    .servico-card__badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      border-radius: 100px;
+      padding: 4px 14px;
+      width: fit-content;
+    }
+    .servico-card--destaque { border-color: var(--teal); background: var(--teal-dim); }
+    .servico-card--destaque .servico-card__badge { background: var(--teal); color: #0a0c0c; border-color: var(--teal); }
+    .servico-card h3 { font-size: 22px; font-weight: 800; color: #fff; margin: 0; line-height: 1.25; }
+    .servico-card p  { font-size: 15px; color: var(--text-muted); margin: 0; line-height: 1.65; }
+    .servico-card__who {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--teal);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+    .servico-card__cta {
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--teal);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border-bottom: 1px solid var(--teal-border);
+      padding-bottom: 2px;
+      transition: border-color 0.2s ease;
+    }
+    .servico-card__cta:hover { border-color: var(--teal); }
+
+    /* ── SERVIÇO SECTION ── */
+    .servico-section { padding: 96px 0; }
+    .servico-section--a { background: var(--dark-2); }
+    .servico-section--b { background: var(--dark); }
+    .servico-section__header { margin-bottom: 56px; }
+    .servico-section__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 16px;
+    }
+    .servico-section__tag::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--teal);
+    }
+    .servico-section__title { font-size: clamp(24px, 3vw, 36px); font-weight: 800; color: #fff; line-height: 1.2; margin: 0 0 16px; }
+    .servico-section__title em { color: var(--teal); font-style: italic; }
+    .servico-section__sub { font-size: 16px; color: var(--text-muted); line-height: 1.65; max-width: 620px; margin: 0; }
+
+    .servico-section__body {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 56px;
+      align-items: start;
+    }
+    @media (max-width: 960px) { .servico-section__body { grid-template-columns: 1fr; } }
+
+    .servico-includes { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--teal-border); border-radius: var(--radius-card); overflow: hidden; }
+    .servico-include {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 22px 28px;
+      border-bottom: 1px solid var(--teal-border);
+      background: var(--dark-2);
+      transition: background 0.15s ease;
+    }
+    .servico-section--b .servico-include { background: var(--dark-3); }
+    .servico-include:last-child { border-bottom: none; }
+    .servico-include:hover { background: var(--dark-3); }
+    .servico-section--b .servico-include:hover { background: var(--dark-2); }
+    .servico-include__icon {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--teal);
+      margin-top: 2px;
+    }
+    .servico-include__text h5 { font-size: 14px; font-weight: 700; color: #fff; margin: 0 0 3px; }
+    .servico-include__text p  { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.5; }
+
+    .servico-cta-box {
+      background: var(--dark);
+      border: 1px solid var(--teal-border);
+      border-radius: var(--radius-card);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: sticky;
+      top: 100px;
+    }
+    .servico-section--b .servico-cta-box { background: var(--dark-2); }
+    .servico-cta-box__label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); }
+    .servico-cta-box h4 { font-size: 20px; font-weight: 800; color: #fff; margin: 0; line-height: 1.25; }
+    .servico-cta-box p  { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+    .servico-cta-box .btn--apply { width: 100%; justify-content: center; display: flex; text-align: center; }
+    .servico-cta-box__note { font-size: 12px; color: var(--text-muted); text-align: center; }
+
+    .servico-optional {
+      margin-top: 12px;
+      padding: 14px 18px;
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      border-radius: 10px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.5;
+    }
+    .servico-optional strong { color: var(--teal); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .para-quem__grid  { grid-template-columns: 1fr; }
+      .processo__steps  { grid-template-columns: 1fr; }
+      .numeros__grid    { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .numero__value    { font-size: 34px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a class="navbar__brand" href="#top">
+      <img class="navbar__logo-img" src="88media-onboarding/public/logo.png" alt="88 Media Digital" width="40" height="32">
+      <span class="navbar__brand-text">88 MEDIA DIGITAL</span>
+    </a>
+    <p class="navbar__tagline">Tráfego pago para infoprodutores. <span>©</span></p>
+  </div>
+</header>
+
+<!-- ====== HERO COM FORM ====== -->
+<section class="hero hero--split" id="top">
+  <div class="container hero__split-grid">
+
+    <!-- Esquerda: copy -->
+    <div class="hero__copy">
+      <span class="agency-tag">
+        <span class="agency-tag__dot" aria-hidden="true"></span>
+        Vagas Limitadas · 2026
+      </span>
+      <p class="kicker">88 Media Digital<span>©</span></p>
+      <h1 class="hero__title">
+        Tráfego pago e funil estratégico para infoprodutores que querem <em>escalar</em> com <em>consistência</em> e <em>previsibilidade</em>.
+      </h1>
+      <ul class="hero__bullets">
+        <li>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Gestão de tráfego pago especializada em infoprodutos
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Estratégia de funil perpétuo que vende todos os dias
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Atendemos players de múltiplos nichos do mercado digital
+        </li>
+      </ul>
+    </div>
+
+    <!-- Direita: formulário Respondi -->
+    <aside class="hero__form-wrap hero__form-wrap--respondi" id="form">
+      <header class="hero-form__head">
+        <span class="hero-form__badge">APLICAÇÃO</span>
+        <h2>Quero trabalhar com a 88 Media</h2>
+        <p>Preencha abaixo. Nossa equipe analisa seu perfil em até 48h.</p>
+      </header>
+      <div class="respondi-embed">
+        <div data-respondi-container="" data-respondi-mode="regular" data-respondi-src="https://form.respondi.app/1PCZX7gd" data-respondi-width="100%" data-respondi-height="560px"></div>
+        <script>const bodyScript=document.querySelector('body'),hasScript=document.querySelector('#respondi_src');if(!hasScript){const script=document.createElement('script');script.setAttribute("async","");document.body.appendChild(script);script.id='respondi_src';script.src='https://embed.respondi.app/embed.js';}</script>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<!-- ====== NÚMEROS ====== -->
+<section class="numeros" aria-label="Resultados">
+  <div class="container">
+    <div class="numeros__grid">
+      <div>
+        <span class="numero__value">+40</span>
+        <span class="numero__label">nichos do mercado<br>digital atendidos</span>
+      </div>
+      <div>
+        <span class="numero__value">Meta<br>+ Google</span>
+        <span class="numero__label" style="font-size:12px">plataformas gerenciadas<br>com especialidade</span>
+      </div>
+      <div>
+        <span class="numero__value">100%</span>
+        <span class="numero__label">foco em infoprodutos<br>e produtos digitais</span>
+      </div>
+      <div>
+        <span class="numero__value">Perpétuo</span>
+        <span class="numero__label" style="font-size:12px">estratégia de funil<br>que vende todo dia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PARA QUEM É ====== -->
+<section class="para-quem">
+  <div class="container">
+    <p class="kicker kicker--light">Para quem é<span>©</span></p>
+    <h2 class="section-title">Trabalhamos com infoprodutores que já estão no jogo — e querem <em>jogar em outro nível</em>.</h2>
+
+    <div class="para-quem__grid">
+      <div class="para-quem__item">
+        <span class="para-quem__num">01</span>
+        <h3>Você já tem produto validado e quer escalar as vendas</h3>
+        <p>Seu infoproduto converte, mas o volume de vendas ainda depende de esforço manual e ações pontuais.</p>
+      </div>
+      <div class="para-quem__item">
+        <span class="para-quem__num">02</span>
+        <h3>Você já investe em tráfego mas os resultados são inconsistentes</h3>
+        <p>Você roda anúncios mas não tem previsibilidade — ora vende muito, ora quase nada, sem entender o porquê.</p>
+      </div>
+      <div class="para-quem__item">
+        <span class="para-quem__num">03</span>
+        <h3>Você quer construir um funil perpétuo que vende todos os dias</h3>
+        <p>Chega de depender só de lançamentos. Você quer uma estrutura de vendas que funcione no piloto automático.</p>
+      </div>
+      <div class="para-quem__item">
+        <span class="para-quem__num">04</span>
+        <h3>Você precisa de uma equipe especializada, não de um generalista</h3>
+        <p>Tráfego para infoproduto tem suas particularidades. Você quer quem entende profundamente esse mercado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== NICHOS E PLAYERS ====== -->
+<section class="nichos">
+  <div class="container">
+    <p class="kicker kicker--light">Experiência de mercado<span>©</span></p>
+    <h2 class="section-title">Atuamos em <em>dezenas de nichos</em> do mercado digital</h2>
+
+    <div class="nichos__chips">
+      <span class="nicho-chip">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Emagrecimento &amp; Saúde
+      </span>
+      <span class="nicho-chip">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Finanças Pessoais
+      </span>
+      <span class="nicho-chip">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Marketing Digital
+      </span>
+      <span class="nicho-chip">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Relacionamentos
+      </span>
+      <span class="nicho-chip">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Carreira &amp; Concursos
+      </span>
+      <span class="nicho-chip">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Negócios &amp; Empreendedorismo
+      </span>
+      <span class="nicho-chip">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Espiritualidade
+      </span>
+      <span class="nicho-chip">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Educação &amp; Idiomas
+      </span>
+      <span class="nicho-chip">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Jurídico &amp; Concursos
+      </span>
+      <span class="nicho-chip">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Pets &amp; Lifestyle
+      </span>
+    </div>
+
+    <!-- Players placeholder -->
+    <div class="nichos__players">
+      <p class="eyebrow center">Players que já passaram pela 88 Media Digital</p>
+      <div class="players-list">
+        <!-- SUBSTITUA PELOS NOMES REAIS DOS SEUS CLIENTES -->
+        <span class="player-tag">[ PLAYER A ]</span>
+        <span class="player-tag">[ PLAYER B ]</span>
+        <span class="player-tag">[ PLAYER C ]</span>
+        <span class="player-tag">[ PLAYER D ]</span>
+        <span class="player-tag">[ PLAYER E ]</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== SOBRE A GESTORA ====== -->
+<section class="sobre-gestora">
+  <div class="container">
+    <p class="kicker kicker--light">Quem está por trás<span>©</span></p>
+    <h2 class="section-title">A 88 Media Digital é liderada por <em>Jessica Niehues</em> — especialista em tráfego para infoprodutos</h2>
+
+    <div class="gestora__grid">
+
+      <div class="gestora__photo">
+        <!-- FOTO: salve como assets/img/jessica.jpg (ou .png / .webp) na mesma pasta do HTML -->
+        <img src="assets/img/jessica.jpeg" alt="Jessica Niehues — fundadora da 88 Media Digital" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gestora__photo-placeholder" aria-hidden="true" style="display:none">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <p>Inserir foto aqui</p>
+        </div>
+      </div>
+
+      <div class="gestora__bio">
+        <h3>Especialista em tráfego pago e estratégia de funil para o mercado de infoprodutos</h3>
+        <p>
+          <!-- EDITE O TEXTO ABAIXO COM SUA BIO -->
+          Jessica Niehues é fundadora da 88 Media Digital e especialista em tráfego pago para infoprodutores.
+          Com atuação em dezenas de nichos do mercado digital, ela combina gestão estratégica de mídia paga com
+          construção de funil perpétuo — entregando não só cliques, mas uma estrutura de vendas que funciona todos os dias.
+        </p>
+        <p>
+          Seu trabalho vai além do gerenciamento de campanhas: cada cliente recebe uma estratégia personalizada
+          baseada no seu produto, público e estágio de negócio — para escalar com inteligência, não com volume.
+        </p>
+
+        <div class="gestora__stats">
+          <div class="gestora__stat">
+            <strong>+40</strong>
+            <span>nichos atendidos</span>
+          </div>
+          <div class="gestora__stat">
+            <strong>Meta<br>+ Google</strong>
+            <span>plataformas</span>
+          </div>
+          <div class="gestora__stat">
+            <strong>100%</strong>
+            <span>foco em infoprodutos</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== COMO TRABALHAMOS: INTRO 2 SERVIÇOS ====== -->
+<section class="servicos-intro">
+  <div class="container">
+    <p class="kicker kicker--light">Como podemos trabalhar juntos<span>©</span></p>
+    <h2 class="section-title">Dois formatos de trabalho — <em>cada um para um momento diferente</em> do seu negócio.</h2>
+
+    <div class="servicos-intro__grid">
+
+      <div class="servico-card">
+        <span class="servico-card__badge">CONSULTORIA</span>
+        <h3>Consultoria Estratégica</h3>
+        <p class="servico-card__who">Para quem executa o próprio tráfego</p>
+        <p>A 88 Media entrega o diagnóstico, o mapa de funil e o plano de tráfego documentado. Você — ou seu time — executa com clareza e direção estratégica profissional.</p>
+        <a href="#consultoria" class="servico-card__cta">
+          Ver detalhes
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="servico-card servico-card--destaque">
+        <span class="servico-card__badge">GESTÃO</span>
+        <h3>Tráfego Gerenciado</h3>
+        <p class="servico-card__who">Para quem quer delegar a operação</p>
+        <p>A 88 Media opera as campanhas de ponta a ponta — Meta Ads, Google Ads e estratégia de funil. Você foca no produto e acompanha os resultados crescendo.</p>
+        <a href="#gestao" class="servico-card__cta">
+          Ver detalhes
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== SERVIÇO 1: CONSULTORIA ESTRATÉGICA ====== -->
+<section class="servico-section servico-section--a" id="consultoria">
+  <div class="container">
+
+    <div class="servico-section__header">
+      <span class="servico-section__tag">Consultoria Estratégica</span>
+      <h2 class="servico-section__title">A 88 Media entrega o mapa.<br><em>Você executa com clareza e direção.</em></h2>
+      <p class="servico-section__sub">Para infoprodutores que querem dominar a estratégia do próprio tráfego — com um plano profissional na mão, sessões ao vivo e orientação de quem entende o mercado de infoprodutos por dentro.</p>
+    </div>
+
+    <div class="servico-section__body">
+
+      <!-- Entregáveis -->
+      <div class="servico-includes">
+
+        <div class="servico-include">
+          <div class="servico-include__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="servico-include__text">
+            <h5>Diagnóstico completo do negócio</h5>
+            <p>Análise profunda das suas campanhas, funil, oferta e métricas — identificando exatamente onde estão os gargalos e as oportunidades.</p>
+          </div>
+        </div>
+
+        <div class="servico-include">
+          <div class="servico-include__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </div>
+          <div class="servico-include__text">
+            <h5>Mapa de funil perpétuo documentado</h5>
+            <p>Estrutura completa da jornada de compra — do anúncio à conversão — desenhada especificamente para o seu produto e público.</p>
+          </div>
+        </div>
+
+        <div class="servico-include">
+          <div class="servico-include__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="servico-include__text">
+            <h5>Plano de tráfego personalizado</h5>
+            <p>Roadmap de campanhas por etapa do funil — quais segmentações usar, como estruturar os conjuntos e qual verba alocar em cada fase.</p>
+          </div>
+        </div>
+
+        <div class="servico-include">
+          <div class="servico-include__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="servico-include__text">
+            <h5>Sessões ao vivo de orientação estratégica</h5>
+            <p>Encontros com Jessica para revisar execução, responder dúvidas, validar criativos e ajustar a rota conforme os dados.</p>
+          </div>
+        </div>
+
+        <div class="servico-include">
+          <div class="servico-include__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+          </div>
+          <div class="servico-include__text">
+            <h5>Revisão e validação de criativos</h5>
+            <p>Feedback estratégico sobre os anúncios antes de publicar — ângulo, copy, formato e alinhamento com a estratégia do funil.</p>
+          </div>
+        </div>
+
+        <div class="servico-include">
+          <div class="servico-include__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <div class="servico-include__text">
+            <h5>Canal direto para dúvidas e validações</h5>
+            <p>Acesso para tirar dúvidas e receber orientações entre as sessões — sem esperar a próxima reunião para tomar decisões.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA Box -->
+      <aside class="servico-cta-box">
+        <span class="servico-cta-box__label">Consultoria Estratégica</span>
+        <h4>Estratégia de Tráfego & Funil Perpétuo</h4>
+        <p>Ideal para quem já investe em tráfego e quer uma estratégia profissional para executar com mais resultado e menos erro.</p>
+
+        <div class="servico-optional">
+          <strong>Bônus:</strong> Após a consultoria, é possível migrar para a <strong>Gestão</strong> — a 88 Media assume a operação com toda a estratégia já construída.
+        </div>
+
+        <a href="#form" class="btn btn--apply">
+          Quero a Consultoria Estratégica
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <p class="servico-cta-box__note">Seleção por curadoria. Vagas limitadas.</p>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== SERVIÇO 2: TRÁFEGO GERENCIADO ====== -->
+<section class="servico-section servico-section--b" id="gestao">
+  <div class="container">
+
+    <div class="servico-section__header">
+      <span class="servico-section__tag">Tráfego Gerenciado</span>
+      <h2 class="servico-section__title">A 88 Media opera.<br><em>Você acompanha os resultados crescendo.</em></h2>
+      <p class="servico-section__sub">Para infoprodutores que querem delegar a operação completa de mídia paga e focar no que fazem de melhor — enquanto especialistas em infoprodutos gerenciam cada campanha com estratégia e precisão.</p>
+    </div>
+
+    <div class="servico-section__body">
+
+      <!-- Entregáveis -->
+      <div class="servico-includes">
+
+        <div class="servico-include">
+          <div class="servico-include__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <div class="servico-include__text">
+            <h5>Gestão de Meta Ads</h5>
+            <p>Criação, segmentação, testes A/B e otimização contínua de campanhas no Facebook e Instagram — com foco em ROAS e custo por venda.</p>
+          </div>
+        </div>
+
+        <div class="servico-include">
+          <div class="servico-include__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div class="servico-include__text">
+            <h5>Gestão de Google Ads</h5>
+            <p>Campanhas de busca, display e YouTube alinhadas ao funil — capturando demanda ativa e amplificando o alcance da sua oferta.</p>
+          </div>
+        </div>
+
+        <div class="servico-include">
+          <div class="servico-include__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </div>
+          <div class="servico-include__text">
+            <h5>Estratégia de funil perpétuo integrada</h5>
+            <p>As campanhas são construídas dentro de uma lógica de funil — topo, meio e fundo alinhados para vender todos os dias, não só em picos.</p>
+          </div>
+        </div>
+
+        <div class="servico-include">
+          <div class="servico-include__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="servico-include__text">
+            <h5>Diagnóstico inicial + onboarding completo</h5>
+            <p>Antes de qualquer campanha ir ao ar, fazemos um raio-x da estrutura atual e construímos a estratégia do zero para o seu produto.</p>
+          </div>
+        </div>
+
+        <div class="servico-include">
+          <div class="servico-include__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="servico-include__text">
+            <h5>Relatórios periódicos de performance</h5>
+            <p>Relatórios claros com as métricas que impactam o faturamento — ROAS, CAC, CPL e vendas atribuídas — sem enrolação.</p>
+          </div>
+        </div>
+
+        <div class="servico-include">
+          <div class="servico-include__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="servico-include__text">
+            <h5>Reuniões de alinhamento estratégico</h5>
+            <p>Encontros regulares para revisar resultados, ajustar estratégia e alinhar os próximos movimentos com base nos dados reais.</p>
+          </div>
+        </div>
+
+        <div class="servico-include">
+          <div class="servico-include__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <div class="servico-include__text">
+            <h5>Suporte estratégico contínuo</h5>
+            <p>Canal direto para validações de criativos, ajustes de oferta e decisões de campanha no dia a dia — sem esperar reunião.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA Box -->
+      <aside class="servico-cta-box">
+        <span class="servico-cta-box__label">Tráfego Gerenciado</span>
+        <h4>Gestão de Performance para Infoprodutos</h4>
+        <p>Ideal para quem já tem produto validado, quer escalar com consistência e não quer mais depender de tentativa e erro nas campanhas.</p>
+
+        <a href="#form" class="btn btn--apply">
+          Quero o Tráfego Gerenciado
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <p class="servico-cta-box__note">Seleção por curadoria. Vagas limitadas por ciclo.</p>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== DIFERENCIAL ====== -->
+<section class="diferencial">
+  <div class="container">
+    <p class="kicker kicker--light">O diferencial<span>©</span></p>
+    <h2 class="section-title">Gestão genérica vs. especialista em infoproduto — <em>a diferença é enorme</em>.</h2>
+
+    <div class="diferencial__compare">
+
+      <div class="compare-col compare-col--sem">
+        <span class="compare-col__label">Gestão genérica</span>
+        <ul class="compare-list">
+          <li>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Campanhas iguais para qualquer tipo de produto
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Foco em métricas de vaidade (likes, alcance, CPM baixo)
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Sem entendimento da jornada do comprador de infoproduto
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Tráfego desconectado do funil — leads que não convertem
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Relatórios confusos sem conexão com faturamento real
+          </li>
+        </ul>
+      </div>
+
+      <div class="compare-col compare-col--com">
+        <span class="compare-col__label">88 Media Digital</span>
+        <ul class="compare-list">
+          <li>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Estratégia desenhada para a realidade do infoproduto
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Foco em ROAS, CAC e faturamento — o que importa de verdade
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Expertise em funil perpétuo específico para produtos digitais
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Tráfego integrado ao funil — cada campanha tem propósito claro
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Relatórios que mostram o impacto direto no seu faturamento
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== COMO FUNCIONA ====== -->
+<section class="processo">
+  <div class="container">
+    <p class="kicker">Como funciona<span>©</span></p>
+    <h2 class="section-title section-title--dark">Do primeiro contato ao <em>resultado</em> — como trabalhamos:</h2>
+
+    <div class="processo__steps">
+      <div class="step">
+        <div class="step__number">01</div>
+        <h4>Aplicação</h4>
+        <p>Você preenche o formulário acima com suas informações. Nossa equipe analisa o perfil em até 48h.</p>
+      </div>
+      <div class="step">
+        <div class="step__number">02</div>
+        <h4>Call estratégica</h4>
+        <p>Se houver fit, agendamos uma call para entender a fundo seu produto, funil atual e objetivos de crescimento.</p>
+      </div>
+      <div class="step">
+        <div class="step__number">03</div>
+        <h4>Diagnóstico e plano</h4>
+        <p>Fazemos um raio-x completo da sua estrutura e entregamos um plano de ação claro para os primeiros 90 dias.</p>
+      </div>
+      <div class="step">
+        <div class="step__number">04</div>
+        <h4>Execução e escala</h4>
+        <p>Colocamos a estratégia em prática com acompanhamento contínuo, relatórios e otimizações semana a semana.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== GARANTIA ====== -->
+<section class="garantia">
+  <div class="container">
+    <div class="garantia__grid">
+      <div class="garantia__seal" aria-hidden="true">
+        <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="seal-text-top2" d="M 120,120 m -92,0 a 92,92 0 1,1 184,0"/>
+            <path id="seal-text-bottom2" d="M 120,120 m -88,0 a 88,88 0 1,0 176,0"/>
+          </defs>
+          <circle cx="120" cy="120" r="112" fill="none" stroke="#1BBCBF" stroke-width="0.5" opacity="0.35"/>
+          <circle cx="120" cy="120" r="105" fill="none" stroke="#1BBCBF" stroke-width="1.5"/>
+          <text font-family="Manrope, sans-serif" font-size="11" letter-spacing="4" fill="#1BBCBF">
+            <textPath href="#seal-text-top2" startOffset="50%" text-anchor="middle">COMPROMISSO · 88 MEDIA DIGITAL</textPath>
+          </text>
+          <text font-family="Manrope, sans-serif" font-size="11" letter-spacing="6" fill="#1BBCBF" opacity="0.7">
+            <textPath href="#seal-text-bottom2" startOffset="50%" text-anchor="middle">★ FOCO EM RESULTADO ★</textPath>
+          </text>
+          <circle cx="120" cy="120" r="78" fill="rgba(27,188,191,0.06)" stroke="#1BBCBF" stroke-width="1" opacity="0.6"/>
+          <circle cx="120" cy="120" r="73" fill="none" stroke="#1BBCBF" stroke-width="0.5" opacity="0.5"/>
+          <g transform="translate(120, 60)" fill="#1BBCBF" opacity="0.85">
+            <polygon points="0,-7 2,-2 7,-2 3,1 5,6 0,3 -5,6 -3,1 -7,-2 -2,-2"/>
+          </g>
+          <text x="120" y="138" text-anchor="middle" font-family="Manrope, serif" font-size="68" font-weight="300" fill="#1BBCBF" letter-spacing="-2">90</text>
+          <text x="120" y="165" text-anchor="middle" font-family="Manrope, sans-serif" font-size="13" letter-spacing="7" fill="#1BBCBF" font-weight="500">DIAS</text>
+          <line x1="55" y1="120" x2="78" y2="120" stroke="#1BBCBF" stroke-width="1" opacity="0.5"/>
+          <line x1="162" y1="120" x2="185" y2="120" stroke="#1BBCBF" stroke-width="1" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="garantia__copy">
+        <p class="eyebrow">Nosso compromisso</p>
+        <h2>90 dias de estratégia real — <em>ou revisamos tudo sem custo extra</em></h2>
+        <p>
+          Acreditamos no que entregamos. Se nos primeiros 90 dias você implementar todas as estratégias
+          que desenvolvemos juntos e não observar uma evolução mensurável nos seus resultados,
+          <strong>revisamos toda a estrutura e seguimos por mais um período sem cobrar nada extra</strong>.
+          É o nosso compromisso com o seu crescimento.
+        </p>
+        <div class="garantia__cta">
+          <a href="#form" class="btn btn--apply btn--lg">Quero aplicar agora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FAQ ====== -->
+<section class="faq">
+  <div class="container container--narrow">
+    <header class="section-head">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="section-title">Perguntas <em>frequentes</em></h2>
+      <p class="section-head__sub">As dúvidas mais comuns sobre a 88 Media Digital e nosso modelo de trabalho.</p>
+    </header>
+
+    <div class="faq__list">
+
+      <details class="faq__item">
+        <summary>Para quem é a 88 Media Digital?</summary>
+        <div class="faq__answer">
+          <p>Para infoprodutores que já têm produto validado e querem escalar as vendas com tráfego pago estratégico. Trabalhamos com quem já vende e quer crescer com consistência — não com quem ainda está descobrindo o que vai vender.</p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary>Qual o investimento mínimo em tráfego para trabalhar com vocês?</summary>
+        <div class="faq__answer">
+          <p><!-- EDITE COM O VALOR REAL --> Trabalhamos com clientes que já investem ou estão prontos para investir a partir de <strong>[R$ X por mês]</strong> em mídia paga. O volume ideal depende do seu produto, margem e objetivo de escala — alinhamos isso na call estratégica.</p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary>Vocês trabalham com quais plataformas?</summary>
+        <div class="faq__answer">
+          <p>Gerenciamos campanhas no <strong>Meta Ads</strong> (Facebook e Instagram) e no <strong>Google Ads</strong> (Busca, Display, YouTube). A combinação de plataformas é definida com base no seu produto e na jornada do seu cliente.</p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary>Vocês também cuidam da criação dos criativos?</summary>
+        <div class="faq__answer">
+          <p><!-- EDITE CONFORME SEU SERVIÇO --> Nosso foco é a <strong>gestão estratégica do tráfego e do funil</strong>. Para os criativos, trabalhamos em parceria com o cliente ou com produtores de conteúdo indicados. Podemos orientar briefings e validar peças para garantir que estejam alinhadas com a estratégia de mídia.</p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary>Como funciona o processo de onboarding?</summary>
+        <div class="faq__answer">
+          <p>Após a aprovação na curadoria, fazemos uma <strong>call comercial</strong> para alinhamento, seguida de <strong>assinatura de contrato</strong> e <strong>coleta de acessos</strong>. Em seguida, realizamos o <strong>diagnóstico completo</strong> e a <strong>call estratégica</strong> — onde apresentamos o plano de ação para os primeiros 90 dias antes de qualquer campanha ir ao ar.</p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary>Como acompanho os resultados das campanhas?</summary>
+        <div class="faq__answer">
+          <p>Você recebe <strong>relatórios periódicos</strong> com as métricas que importam — ROAS, CAC, CPL, faturamento atribuído — e temos <strong>reuniões de alinhamento</strong> regulares para revisar estratégia, resultados e próximos passos.</p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary>A agência atende qualquer nicho de infoproduto?</summary>
+        <div class="faq__answer">
+          <p>Temos experiência em dezenas de nichos — de saúde e emagrecimento a finanças, relacionamentos, educação e negócios digitais. Cada novo cliente passa por uma curadoria para garantir que o fit estratégico está correto antes de fechar.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA FINAL COM RESPONDI ====== -->
+<section class="cta-final">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Pronto para escalar?</p>
+      <h2 class="section-title">Aplique agora e receba uma análise <em>personalizada do seu negócio</em></h2>
+      <p class="section-head__sub">Vagas limitadas por ciclo. Preencha o formulário e nossa equipe entra em contato em até 48h.</p>
+    </header>
+
+    <div class="cta-final-form">
+      <div data-respondi-container="" data-respondi-mode="regular" data-respondi-src="https://form.respondi.app/1PCZX7gd" data-respondi-width="100%" data-respondi-height="560px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer footer--os">
+  <div class="container">
+    <div class="footer-logo" aria-label="88 Media Digital">
+      <img src="88media-onboarding/public/logo.png" alt="88 Media Digital" width="48" height="40" loading="lazy" style="display:inline-block;vertical-align:middle;">
+    </div>
+    <p>Copyright © 2026 — todos os direitos reservados.</p>
+    <p class="footer-contact">
+      <!-- EDITE COM SEU EMAIL E LINKS -->
+      <a href="mailto:contato@88mediadigital.com.br">contato@88mediadigital.com.br</a> ·
+      <a href="#">Termos de uso &amp; Privacidade</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Script Respondi (carrega uma única vez) -->
+<script>
+  (function(){
+    if(!document.querySelector('#respondi_src')){
+      var s=document.createElement('script');
+      s.setAttribute('async','');
+      s.id='respondi_src';
+      s.src='https://embed.respondi.app/embed.js';
+      document.body.appendChild(s);
+    }
+  })();
+</script>
+</body>
+</html>
